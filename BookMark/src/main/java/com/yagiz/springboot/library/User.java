@@ -1,4 +1,4 @@
-package net.codejava.ProductManager;
+package com.yagiz.springboot.library;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

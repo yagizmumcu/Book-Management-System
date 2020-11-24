@@ -1,4 +1,4 @@
-package net.codejava.ProductManager;
+package com.yagiz.springboot.library;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 

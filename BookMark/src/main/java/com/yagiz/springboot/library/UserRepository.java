@@ -1,4 +1,4 @@
-package net.codejava.ProductManager;
+package com.yagiz.springboot.library;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
