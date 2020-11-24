@@ -18,6 +18,7 @@ public class Publisher {
 	private Integer pid;
 	private String name;
 	private String details;
+	
 	@OneToMany(mappedBy = "publisher", cascade =CascadeType.ALL)
 	private Set<Book> books;
 	

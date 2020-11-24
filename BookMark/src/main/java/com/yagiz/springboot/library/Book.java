@@ -24,19 +24,24 @@ public class Book {
 	@JoinColumn(name = "publisher_id")
 	private Publisher publisher;
 	
+	@ManyToOne
+	@JoinColumn(name = "author_id")
+	private Author author;
+	
 	
 	public Book() {
 		
 	}
 
 	
-	public Book(Integer bid, String name, String details, Integer isbn, Publisher publisher) {
+	public Book(Integer bid, String name, String details, Integer isbn, Publisher publisher, Author author) {
 		super();
 		this.bid = bid;
 		this.name = name;
 		this.details = details;
 		this.isbn = isbn;
 		this.publisher = publisher;
+		this.author = author;
 	}
 
 
@@ -63,6 +68,13 @@ public class Book {
 	}
 	public void setIsbn(Integer isbn) {
 		this.isbn = isbn;
+	}
+	public Author getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(Author author) {
+		this.author = author;
 	}
 	public Publisher getPublisher() {
 		return publisher;

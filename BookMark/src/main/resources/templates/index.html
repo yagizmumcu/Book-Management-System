@@ -30,6 +30,7 @@
             <th>Details</th>
             <th>ISBN</th>
             <th>Publisher</th>
+            <th>Author</th>
             <th>Actions</th>
             
         </tr>
@@ -39,9 +40,9 @@
                 <td th:text=${book.bid}>Book ID</td>
                 <td th:text=${book.name}>Name</td>
                 <td th:text=${book.details}>Details</td>
-                <td th:text=${book.isbn}>Isbn</td>
-				<td th:text=${book.publisher.name}>Publisher</td>                
-				
+                <td th:text=${book.isbn}>ISBN</td>
+                <td th:text=${book.publisher.name}>Publisher</td> 
+                <td th:text=${book.author.name}>Author</td>                               
                 <td>
                     <a th:href="@{'/edit/' + ${book.bid}}">Edit</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;

@@ -17,6 +17,10 @@ public class AppController {
 	private BookService service;
 	@Autowired
 	private PublisherService pservice;
+	
+	@Autowired
+	private AuthorService aservice;
+	
 	@RequestMapping("/")
 	public String viewHomePage(Model model) {
 		List<Book> listBooks = service.listAll();
@@ -27,9 +31,13 @@ public class AppController {
 	public String showNewProductForm(Model model) {
 		Book book = new Book();
 		model.addAttribute("book", book);
+		
 		List<Publisher> publisher = pservice.listAll();
 		model.addAttribute("publisher", publisher);
 		
+		List<Author> author = aservice.listAll();
+		model.addAttribute("author", author);
+
 		return "new_book";
 	}
 
@@ -45,8 +53,13 @@ public class AppController {
 		
 		Book book = service.get(bid);
 		mav.addObject("book", book);
+		
 		List<Publisher> publisher = pservice.listAll();
 		mav.addObject("publisher", publisher);
+		
+		List<Author> author = aservice.listAll();
+		mav.addObject("author", author);
+		
 		return mav;
 	}
 	@RequestMapping("/delete/{bid}")
