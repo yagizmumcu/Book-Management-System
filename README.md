@@ -6,6 +6,6 @@ Book Management System with Java Spring Boot, Thymeleaf, JPA, Hibernate, MySql, 
 -Export mysql files to your current server <br />
 -Change to your mysql username and password from application.properties file. <br />
 -A publisher can have multiple books, a book can have one publisher at a time. <br />
--An author can have multiple books, a book can have one author at a time. (Simplified book with only one author)
+-An author can have multiple books, a book can have one author at a time. (Simplified book with only one author)<br />
 -For any feedbacks, please mail me -> ymumcu@protonmail.com <br />
 
